@@ -8,13 +8,14 @@ void main()
     printf("Enter the stuffed string: ");
     scanf("%s", input);
 
-    for(i = 1; input[i] != 'F'; i++)   
+    for(i = 0; input[i] != '\0'; i++)
     {
+        if(input[i] == 'F' && input[i + 1] == '\0')
+            break;
+
         if(input[i] == 'E')
-        {
-            i++;    
-            
-        }
+            i++;
+
         output[j++] = input[i];
     }
 
